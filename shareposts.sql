@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 25, 2021 at 06:39 PM
+-- Generation Time: Aug 26, 2021 at 12:42 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -35,6 +35,14 @@ CREATE TABLE `posts` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`id`, `user_id`, `title`, `body`, `created_at`) VALUES
+(9, 12, 'Post Three', 'This is post three', '2021-08-26 15:49:20'),
+(12, 4, 'as', 'afdasf', '2021-08-26 18:41:09');
+
 -- --------------------------------------------------------
 
 --
@@ -61,7 +69,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`) VALUES
 (8, 'deo', 'admin@sd.n', '$2y$10$JbzALKcKa1J8LYx4c1ygluBo0EHBta4k/Vz2lcH8pkkGtmvrZ3PO6', '2021-08-25 19:10:54'),
 (9, 'deo', 'admin1@sd.n', '$2y$10$6RLsZV8DpZy7faBkPgUdY.hgl1/OYz5RxxBuL7U57GNizV4Lk1YX6', '2021-08-25 19:11:27'),
 (10, 'deo', 'admin2@sd.n', '$2y$10$0TWVqrsvwIrdc2HPdQrCNuOJG82lUAwtR9HxhHvMxRuhK.dZ2E/5K', '2021-08-25 19:15:38'),
-(11, 'de', 'admin@5f.v', '$2y$10$nPSCX3G4HjnRGrDY8kpVkeH3HxEtAiuZ4FINJExS8ixBFgs1og2Cq', '2021-08-25 19:17:22');
+(11, 'de', 'admin@5f.v', '$2y$10$nPSCX3G4HjnRGrDY8kpVkeH3HxEtAiuZ4FINJExS8ixBFgs1og2Cq', '2021-08-25 19:17:22'),
+(12, 'karoldan', 'roldan@gmail.com', '$2y$10$PBCt4bAqCEwyuGjDRSjcW.UbL7qOJiBOeZpprq5YE7olu08ORRCfq', '2021-08-26 15:48:36');
 
 --
 -- Indexes for dumped tables
@@ -87,13 +96,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
